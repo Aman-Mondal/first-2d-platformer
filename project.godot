@@ -18,7 +18,6 @@ config/icon="res://icon.svg"
 [display]
 
 window/stretch/mode="canvas_items"
-window/stretch/aspect="expand"
 
 [physics]
 
@@ -30,3 +29,4 @@ window/stretch/aspect="expand"
 rendering_device/driver.windows="d3d12"
 renderer/rendering_method="gl_compatibility"
 renderer/rendering_method.mobile="gl_compatibility"
+environment/defaults/default_clear_color=Color(0.04200414, 0.07945988, 0.07412689, 1)
