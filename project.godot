@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="GameDev-Lab"
-run/main_scene="uid://b5ni6xoibwvx2"
+run/main_scene="uid://bmswgq2maaa8b"
 config/features=PackedStringArray("4.7", "GL Compatibility")
 config/icon="res://icon.svg"
 
