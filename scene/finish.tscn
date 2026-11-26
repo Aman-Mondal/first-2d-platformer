@@ -3,6 +3,8 @@
 [ext_resource type="Script" uid="uid://buc670vld4sn7" path="res://scene/finish.gd" id="1_bq37b"]
 [ext_resource type="Texture2D" uid="uid://dha11ivspc31a" path="res://Checkpoint (Flag Idle)(64x64).png" id="1_g0qo3"]
 
+[sub_resource type="PackedScene" id="PackedScene_bq37b"]
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_bq37b"]
 atlas = ExtResource("1_g0qo3")
 region = Rect2(0, 0, 64, 64)
@@ -82,10 +84,11 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hxu56"]
-size = Vector2(47.5, 60.5)
+size = Vector2(65.5, 67.5)
 
 [node name="Area2D" type="Area2D" unique_id=1294057134]
 script = ExtResource("1_bq37b")
+target_level = SubResource("PackedScene_bq37b")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1732566588]
 texture_filter = 1
@@ -95,7 +98,7 @@ autoplay = "default"
 frame_progress = 0.2729833
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=22740751]
-position = Vector2(5.25, 11.75)
+position = Vector2(1, 10)
 shape = SubResource("RectangleShape2D_hxu56")
 
-[connection signal="body_shape_entered" from="." to="." method="_on_body_shape_entered"]
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
