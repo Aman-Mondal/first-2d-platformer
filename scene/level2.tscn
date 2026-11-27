@@ -7,6 +7,8 @@
 [ext_resource type="PackedScene" uid="uid://bq4bgl8vnqlhd" path="res://scene/fruit.tscn" id="5_jifot"]
 [ext_resource type="PackedScene" uid="uid://by6dt2ni8brlx" path="res://scene/finish.tscn" id="6_3opl0"]
 [ext_resource type="PackedScene" uid="uid://bmswgq2maaa8b" path="res://scene/main_menu.tscn" id="7_lnov8"]
+[ext_resource type="Texture2D" uid="uid://cdl8dm5j1xpiw" path="res://scene/Pixel Art Glossy Heart.png" id="8_kj7ci"]
+[ext_resource type="PackedScene" uid="uid://j5ayoo0jvqxp" path="res://scene/goblin.tscn" id="8_yilmc"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_28aoi"]
 load_path = "res://.godot/imported/Gray.png-86eb58dbcab696be1601153a322cc2d3.ctex"
@@ -271,7 +273,7 @@ position = Vector2(1416, 55)
 position = Vector2(1929, 229)
 
 [node name="Area2D9" parent="SceneObjects/Collictables" unique_id=1508346348 instance=ExtResource("5_jifot")]
-position = Vector2(1107, 73)
+position = Vector2(1129, 84)
 
 [node name="Area2D10" parent="SceneObjects/Collictables" unique_id=1264087235 instance=ExtResource("5_jifot")]
 position = Vector2(2266, 314)
@@ -313,6 +315,9 @@ position = Vector2(4679, 465)
 [node name="Area2D19" parent="SceneObjects/Collictables" unique_id=1422700414 instance=ExtResource("5_jifot")]
 position = Vector2(4865, 313)
 
+[node name="RigidBody2D" parent="SceneObjects" unique_id=713216503 instance=ExtResource("8_yilmc")]
+position = Vector2(189, 584)
+
 [node name="UI" type="CanvasLayer" parent="." unique_id=184276195]
 
 [node name="Panel" type="Panel" parent="UI" unique_id=1454977122]
@@ -333,3 +338,39 @@ theme_override_font_sizes/font_size = 29
 text = "Points : "
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="Hearts" type="Panel" parent="UI" unique_id=191709585]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -192.0
+offset_top = 16.0
+offset_right = -10.0
+offset_bottom = 60.0
+grow_horizontal = 0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="UI/Hearts" unique_id=985003385]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -185.0
+offset_top = 3.0
+offset_right = 3.0
+offset_bottom = 43.0
+grow_horizontal = 0
+
+[node name="Heart" type="TextureRect" parent="UI/Hearts/HBoxContainer" unique_id=630736265]
+layout_mode = 2
+texture = ExtResource("8_kj7ci")
+expand_mode = 3
+
+[node name="Heart2" type="TextureRect" parent="UI/Hearts/HBoxContainer" unique_id=536720945]
+layout_mode = 2
+texture = ExtResource("8_kj7ci")
+expand_mode = 3
+
+[node name="Heart3" type="TextureRect" parent="UI/Hearts/HBoxContainer" unique_id=1783566086]
+layout_mode = 2
+texture = ExtResource("8_kj7ci")
+expand_mode = 3

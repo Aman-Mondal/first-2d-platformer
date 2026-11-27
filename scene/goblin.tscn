@@ -1,0 +1,84 @@
+[gd_scene format=3 uid="uid://j5ayoo0jvqxp"]
+
+[ext_resource type="Texture2D" uid="uid://dwdingq4y2xe8" path="res://scene/Goblin Run Cycle Sprite Sheet.png" id="1_dxroh"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uwj4q"]
+atlas = ExtResource("1_dxroh")
+region = Rect2(6, 130, 319, 512)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_akkl6"]
+atlas = ExtResource("1_dxroh")
+region = Rect2(325, 130, 319, 512)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_smgcp"]
+atlas = ExtResource("1_dxroh")
+region = Rect2(644, 130, 319, 512)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f3ng6"]
+atlas = ExtResource("1_dxroh")
+region = Rect2(963, 130, 319, 512)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_unede"]
+atlas = ExtResource("1_dxroh")
+region = Rect2(6, 642, 319, 512)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m0u6d"]
+atlas = ExtResource("1_dxroh")
+region = Rect2(325, 642, 319, 512)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c4d7q"]
+atlas = ExtResource("1_dxroh")
+region = Rect2(644, 642, 319, 512)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_12ppa"]
+atlas = ExtResource("1_dxroh")
+region = Rect2(963, 642, 319, 512)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_sm5ie"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uwj4q")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_akkl6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_smgcp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f3ng6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_unede")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_m0u6d")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c4d7q")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_12ppa")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 12.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_hc83n"]
+radius = 33.0
+height = 80.0
+
+[node name="RigidBody2D" type="RigidBody2D" unique_id=713216503]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1720437490]
+position = Vector2(-1.0000019, -2.000002)
+scale = Vector2(0.24745297, 0.21362303)
+sprite_frames = SubResource("SpriteFrames_sm5ie")
+autoplay = "default"
+frame_progress = 0.4387364
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1231729387]
+position = Vector2(4, -2)
+shape = SubResource("CapsuleShape2D_hc83n")
